@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>장바구니 목록</h2>
+	<hr />
+	<table>
+		<tr>
+			<th>상품번호</th>
+			<th>수량</th>
+		</tr>
+		<tr th:each="c:${list}">
+			<td th:text="${c.no}"></td>
+			<td th:text="${c.qty}"></td>
+		</tr>
+	</table>
+	<a href="/orders/checkout">주문하기</a>
+</body>
+</html>
