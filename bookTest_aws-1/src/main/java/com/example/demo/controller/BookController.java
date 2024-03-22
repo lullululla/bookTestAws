@@ -28,8 +28,9 @@ public class BookController {
 
 	@GetMapping("/book/list")
 	public String list(Model model) {
+		String view = "/book/list";
 		model.addAttribute("list", bs.listBook()); 
-		return "/book/list";
+		return view;
 	}
 	
 	@GetMapping("/book/insert")

@@ -17,14 +17,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "member")
-public class Member {	
-	@Id
-	private String id;
-	private String pwd;
-	private String name;
-	private String email;
-	private String tel;
-	private String addr;
-	private String postcode;
-	private String role;	
+public class Member {   
+   @Id
+   private String id;
+   private String pwd;
+   private String name;
+   private String email;
+   private String tel;
+   private String addr;
+   private String postcode;
+   private String role;   
 }

@@ -14,19 +14,18 @@ import lombok.Setter;
 @Setter
 public class MemberService{
 
-	@Autowired
-	private MemberDAO memberDAO;
-	
-	public MemberService() {
-		System.out.println("MemberService 생성됨");
-	}
-	
-	public void insert(Member m ) {
-		memberDAO.save(m);
-	}
+   @Autowired
+   private MemberDAO memberDAO;
+   
+   public MemberService() {
+      System.out.println("MemberService 생성됨");
+   }
+   
+   public void insert(Member m ) {
+      memberDAO.save(m);
+   }
 
 }
-
 
 
 

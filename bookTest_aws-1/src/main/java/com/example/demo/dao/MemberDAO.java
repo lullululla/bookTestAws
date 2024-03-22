@@ -7,6 +7,5 @@ import com.example.demo.entity.Member;
 
 @Repository
 public interface MemberDAO extends JpaRepository<Member, String> {
-		
+      
 }
-
