@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>도서 수정</h2>
+	<hr>
+	<div align="center">
+		<form action="/book/update" method="post" enctype="multipart/form-data">>
+			<input type="hidden" name="bookid" th:value="${book.bookid }">
+			<table width="50%" border="1">
+				<tr>
+					<td>도서번호 : <span th:text="${book.bookid}" id="bookid"></span></td>
+				</tr>
+				<tr>
+					<td>도서제목 : <input type="text" name="bookname" th:value="${book.bookname}" /></td>
+				</tr>
+				<tr>
+					<td>출판사명 : <input type="text" name="publisher" th:value="${book.publisher}" /></td>
+				</tr>
+				<tr>
+					<td>도서가격 : <input type="text" name="price" th:value="${book.price}" /></td>
+				</tr>
+				<tr>
+					<td>첨부파일:<input type = "file" name = "uploadFile"></td>
+						<span th:text="${book.fname} "></span></td>
+				<tr align="right">
+					<td><input type="submit" value="수정"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
